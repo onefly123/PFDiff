@@ -18,7 +18,7 @@ Our code is divided into two parts: conditional sampling and unconditional sampl
 ## Conditional Sampler
 Our code is based on modifications of the [Stable Diffusion](https://github.com/CompVis/stable-diffusion) and [guided_diffusion](https://github.com/openai/guided-diffusion). If you encounter any unforeseen issues, please refer to the code of that paper.
 
-### Envirment Setting
+### Environment Setting
 Please open the `README.md` file in the Stable Diffusion folder and configure the `ldm` virtual environment according to the instructions provided in the file. Note! This environment is applicable to both Stable Diffusion and guided_diffusion!
 
 #### Stable Diffusion
