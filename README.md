@@ -1,6 +1,7 @@
 # PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores
 This repository is the official code for the paper [PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores](https://openreview.net/forum?id=wmmDvZGFK7) (ICLR 2025).
-[https://arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)
+
+Arxiv: [https://arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)
 
 # Introduction
 PFDiff is a *training‐free*, orthogonal timestep-skipping method that accelerates diffusion model sampling. It uses past scores to predict a "springboard" and applies Nesterov-inspired foresight updates to correct discretization errors, thereby reducing the number of function evaluations (NFE). For example, with DDIM it achieves 16.46 FID in 4 NFE on ImageNet 64x64 and 13.06 FID in 10 NFE on Stable Diffusion. 
