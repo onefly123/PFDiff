@@ -1,6 +1,5 @@
 # PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores
 This repository is the official code for the paper [PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores](https://openreview.net/forum?id=wmmDvZGFK7) (ICLR 2025).
-
 [https://arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)
 
 ![Alt text](assets/Sampling.png)
@@ -18,7 +17,7 @@ Our code is divided into two parts: conditional sampling and unconditional sampl
 ## Conditional Sampler
 Our code is based on modifications of the [Stable Diffusion](https://github.com/CompVis/stable-diffusion) and [guided_diffusion](https://github.com/openai/guided-diffusion). If you encounter any unforeseen issues, please refer to the code of that paper.
 
-### Environment Setting
+### Envirment Setting
 Please open the `README.md` file in the Stable Diffusion folder and configure the `ldm` virtual environment according to the instructions provided in the file. Note! This environment is applicable to both Stable Diffusion and guided_diffusion!
 
 #### Stable Diffusion
