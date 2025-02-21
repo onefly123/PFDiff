@@ -1,6 +1,0 @@
-torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117 
-tqdm==4.62.3
-pytorch-fid==0.2.0
-PyYAML==6.0
-tensorboard==2.7.0
-lmdb==1.2.1
