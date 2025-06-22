@@ -1,7 +1,9 @@
-# PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores
-This repository is the official code for the paper [PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores](https://openreview.net/forum?id=wmmDvZGFK7) (**ICLR 2025**).
+# PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores<br><sub>Official PyTorch implementation of the [ICLR 2025](https://openreview.net/forum?id=wmmDvZGFK7) paper</sub>
 
-Arxiv: [https://arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)
+🔗 **Links**  
+- 📄 **ArXiv**: [arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)  
+- 📝 **OpenReview**: [openreview.net/forum?id=wmmDvZGFK7](https://openreview.net/forum?id=wmmDvZGFK7)  
+- 📧 **Contact**: [wangguangyi@stu.xmu.edu.cn](mailto:wangguangyi@stu.xmu.edu.cn)
 
 # Introduction
 PFDiff is a *training‐free*, orthogonal timestep-skipping method that accelerates diffusion model sampling. It uses past scores to predict a "springboard" and applies Nesterov-inspired foresight updates to correct discretization errors, thereby reducing the number of function evaluations (NFE). For example, with DDIM it achieves 16.46 FID in 4 NFE on ImageNet 64x64 and 13.06 FID in 10 NFE on Stable Diffusion. 
@@ -22,7 +24,7 @@ Please open the `README.md` file in the Stable Diffusion folder and configure th
 - Guided Diffusion: Please open the `README.md` file in the guided_diffusion folder, and follow the instructions within to download the model into the `models` folder, and the `.npz` file for calculating FID into the `fid_stats` folder.
 
 ### Run the Code
-- Stable Diffusion: It's essential to set both n_samples in these scripts and batch_size in configs/stable-diffusion/v1-inference_coco.yaml to desired your batch size. We use `sample_fid_ddim_s1.5.sh` and `sample_fid_ddim.sh` to run the code. The only difference between these two files is the guided scale. Use the command `cat sample_fid_ddim_s1.5.sh | bash` to execute it. Both scripts are capable of running all the methods mentioned in the paper.
+- Stable Diffusion: It's essential to set both n_samples in these scripts and batch_size in configs/stable-diffusion/v1-inference_coco.yaml to desired your batch size. We use `sample_fid_ddim_s1.5.sh` and `sample_fid_ddim.sh` to run the code. The only difference between these two files is the guided scale. Use the command `bash sample_fid_ddim_s1.5.sh` to execute it. Both scripts are capable of running all the methods mentioned in the paper.
 
 - Guided Diffusion: We use `sample_imagenet64_classifier_guidance.sh` to run the code. All methods mentioned in the paper can be executed using this file. Please set the `ALGORITHMS` parameter in the file, which allows the sequential execution of multiple algorithms. **Attention!!!** You need to set the `PYTHONPATH` in the file to your root directory `/condition/guided_diffusion`. This path is an absolute path.
 
@@ -52,12 +54,13 @@ This repo relies on the following existing codebases:
 - [dpm-solver](https://github.com/LuChengTHU/dpm-solver) ([DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps](https://arxiv.org/abs/2206.00927))
 
 # Citation
-If you use this code for your research, please consider citing the paper:
+If you find the code useful for your research, please consider citing:
 
 ```bibtex
-@article{wang2024pfdiff,
-  title={PFDiff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores},
-  author={Wang, Guangyi and Cai, Yuren and Li, Lijiang and Peng, Wei and Su, Songzhi},
-  journal={arXiv preprint arXiv:2408.08822},
-  year={2024}
+@inproceedings{wang2025pfdiff,
+  title={{PFD}iff: Training-Free Acceleration of Diffusion Models Combining Past and Future Scores},
+  author={Guangyi Wang and Yuren Cai and lijiang Li and Wei Peng and Song-Zhi Su},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=wmmDvZGFK7}
 }
