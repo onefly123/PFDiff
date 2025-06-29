@@ -2,8 +2,10 @@
 
 🔗 **Links**  
 - 📄 **ArXiv**: [arxiv.org/abs/2408.08822](https://arxiv.org/abs/2408.08822)  
-- 📝 **OpenReview**: [openreview.net/forum?id=wmmDvZGFK7](https://openreview.net/forum?id=wmmDvZGFK7)  
-- 📧 **Contact**: [wangguangyi@stu.xmu.edu.cn](mailto:wangguangyi@stu.xmu.edu.cn)
+- 📝 **OpenReview**: [openreview.net/forum?id=wmmDvZGFK7](https://openreview.net/forum?id=wmmDvZGFK7)
+- 🖼️ **Poster**: [View Poster (PNG)](https://iclr.cc/media/PosterPDFs/ICLR%202025/27822.png?t=1743947768.3811555)
+
+📧 **Contact**: [wangguangyi@stu.xmu.edu.cn](mailto:wangguangyi@stu.xmu.edu.cn)
 
 # Introduction
 PFDiff is a *training‐free*, orthogonal timestep-skipping method that accelerates diffusion model sampling. It uses past scores to predict a "springboard" and applies Nesterov-inspired foresight updates to correct discretization errors, thereby reducing the number of function evaluations (NFE). For example, with DDIM it achieves 16.46 FID in 4 NFE on ImageNet 64x64 and 13.06 FID in 10 NFE on Stable Diffusion. 
