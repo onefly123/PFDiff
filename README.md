@@ -11,6 +11,11 @@
 PFDiff is a *training‐free*, orthogonal timestep-skipping method that accelerates diffusion model sampling. It uses past scores to predict a "springboard" and applies Nesterov-inspired foresight updates to correct discretization errors, thereby reducing the number of function evaluations (NFE). For example, with DDIM it achieves 16.46 FID in 4 NFE on ImageNet 64x64 and 13.06 FID in 10 NFE on Stable Diffusion. 
 ![Alt text](assets/PFDiff.png)
 
+# Updates
+**October 1, 2025**: We have added support for PFDiff with the Euler solver for inference with the [FLUX.1](https://github.com/black-forest-labs/flux) model (based on the **flow matching** paradigm) in the [diffusers](https://github.com/huggingface/diffusers) codebase. You can find the main code modifications under the [PFDiff/FLUX](https://github.com/onefly123/PFDiff/tree/main/FLUX) directory by searching for the `PFDiff` keyword.
+
+**Note**: In addition to the FLUX.1 model, the same modification logic in `PFDiff/FLUX` can be applied to [FLUX.1 Fill, FLUX.1 Kontext](https://github.com/black-forest-labs/flux), [QwenImage/QwenImageEdit](https://github.com/QwenLM/Qwen-Image), and **potentially other models with similar inference pipelines**. We have validated all of the above-mentioned models with PFDiff, which can reduce the Euler solver NFE by half in low-step inference **without compromising sampling quality**.
+
 # Usage
 Our code is divided into two parts: conditional sampling and unconditional sampling, each providing two examples. Please configure your environment according to the tutorial below. Since our code is based on the implementation of the code from the cited paper, if you encounter any unforeseen issues, please refer to the corresponding tutorial in the codebase. We use [pytorch_fid](https://github.com/mseitzer/pytorch-fid) to get the FID. Thank you for using our code!
 
